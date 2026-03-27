@@ -292,8 +292,13 @@
       width: 38px; height: 38px; border-radius: 50%;
       background: var(--accent);
       display: grid; place-items: center; flex-shrink: 0;
-      font-size: 14px; color: #fff;
+      color: #fff;
       transition: transform .15s, background .15s;
+    }
+    .q-play svg {
+      width: 16px; height: 16px;
+      stroke-width: 2.5;
+      fill: #fff; stroke: #fff;
     }
     .q-item:active .q-play { transform: scale(.9); background: #b20710; }
 
@@ -497,7 +502,7 @@ function openPanel(i) {
             <div class="q-title">${q.q}</div>
             <div class="q-sub">${q.note}${seen ? ' · ✓ Watched' : ''}</div>
           </div>
-          <div class="q-play">▶</div>
+          <div class="q-play"><i data-lucide="play"></i></div>
         </div>
         <div class="q-video" id="qv-${qi}">
           <div class="video-wrap">
